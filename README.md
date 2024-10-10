@@ -151,67 +151,65 @@ public class DataTypeDemo {
 
 Arithmetic operators are used to perform mathematical operations such as addition, subtraction, multiplication, and division.
 
-Operator Description Example
-
--         Addition	                                a + b (adds a and b)
-
-*         Subtraction	                                a - b (subtracts b from a)
-
--         Multiplication	                            a * b (multiplies a and b)
-  / Division a / b (divides a by b)
-  % Modulus (remainder) a % b (remainder of a divided by b)
-  ++ Increment (adds 1 to the value) a++ or ++a
-  -- Decrement (subtracts 1 from the value) a-- or --a
+| Operator | Description                            | Example                                   |
+| -------- | -------------------------------------- | ----------------------------------------- |
+| +        | Addition                               | `a + b` (adds `a` and `b`)                |
+| -        | Subtraction                            | `a - b` (subtracts `b` from `a`)          |
+| \*       | Multiplication                         | `a * b` (multiplies `a` and `b`)          |
+| /        | Division                               | `a / b` (divides `a` by `b`)              |
+| %        | Modulus (remainder)                    | `a % b` (remainder of `a` divided by `b`) |
+| ++       | Increment (adds 1 to the value)        | `a++` or `++a`                            |
+| --       | Decrement (subtracts 1 from the value) | `a--` or `--a`                            |
 
 #### Relational Operators
 
 Relational operators compare two values and return a boolean result (true or false).
 
-Operator Description Example
-== Equal to a == b (true if a is equal to b)
-!= Not equal to a != b (true if a is not equal to b)
-
->             Greater than	            a > b (true if a is greater than b)
->
-> < Less than a < b (true if a is less than b)
-> = Greater than or equal to a >= b (true if a is greater than or equal to b)
-> <= Less than or equal to a <= b (true if a is less than or equal to b)
+| Operator | Description              | Example                                                |
+| -------- | ------------------------ | ------------------------------------------------------ |
+| ==       | Equal to                 | `a == b` (true if `a` is equal to `b`)                 |
+| !=       | Not equal to             | `a != b` (true if `a` is not equal to `b`)             |
+| >        | Greater than             | `a > b` (true if `a` is greater than `b`)              |
+| <        | Less than                | `a < b` (true if `a` is less than `b`)                 |
+| >=       | Greater than or equal to | `a >= b` (true if `a` is greater than or equal to `b`) |
+| <=       | Less than or equal to    | `a <= b` (true if `a` is less than or equal to `b`)    |
 
 #### Logical Operators
 
 Logical operators are used to perform logical "AND", "OR", and "NOT" operations. These are typically used with boolean expressions.
 
-Operator Description Example
-&& Logical AND a && b (true if both a and b are true)
-|| Logival OR a || b (true if any a or b are true)
-! Logical NOT !a (true if a is false)
+| Operator | Description | Example                                      |
+| -------- | ----------- | -------------------------------------------- | --- | ---------------------------------- |
+| &&       | Logical AND | `a && b` (true if both `a` and `b` are true) |
+| \|\|     | Logical OR  | `a                                           |     | b`(true if either`a`or`b` is true) |
+| !        | Logical NOT | `!a` (true if `a` is false)                  |
 
 #### Bitwise Operators
 
 Bitwise operators operate on individual bits of integer data types (byte, short, int, long). They perform bit-level operations.
 
-Operator Description Example
-& Bitwise AND (1 if both bits are 1) a & b
-| Bitwise OR (1 if either of the bits is 1) a | b
-^ Bitwise XOR (1 if bits are different) a ^ b
-~ Bitwise NOT (inverts bits) ~a
-<< Left shift (shifts bits to the left) a << 2
-
-> >             Right shift (shifts bits to the right)	        a >> 2
-> >
-> > >             Unsigned right shift (shifts with 0 fill)	    a >>> 2
+| Operator | Description                               | Example   |
+| -------- | ----------------------------------------- | --------- | --- |
+| &        | Bitwise AND (1 if both bits are 1)        | `a & b`   |
+| \|       | Bitwise OR (1 if either of the bits is 1) | `a        | b`  |
+| ^        | Bitwise XOR (1 if bits are different)     | `a ^ b`   |
+| ~        | Bitwise NOT (inverts bits)                | `~a`      |
+| <<       | Left shift (shifts bits to the left)      | `a << 2`  |
+| >>       | Right shift (shifts bits to the right)    | `a >> 2`  |
+| >>>      | Unsigned right shift (shifts with 0 fill) | `a >>> 2` |
 
 #### Assignment Operators
 
 Assignment operators are used to assign values to variables. The most common one is =.
 
-Operator Description Example
-= Assigns value a = 5
-+= Adds and assigns value a += 5 (same as a = a + 5)
--= Subtracts and assigns value a -= 5 (same as a = a - 5)
-_= Multiplies and assigns value a _= 5 (same as a = a \* 5)
-/= Divides and assigns value a /= 5 (same as a = a / 5)
-%= Modulus and assigns value a %= 5 (same as a = a % 5)
+| Operator | Description                  | Example                        |
+| -------- | ---------------------------- | ------------------------------ |
+| =        | Assigns value                | `a = 5`                        |
+| +=       | Adds and assigns value       | `a += 5` (same as `a = a + 5`) |
+| -=       | Subtracts and assigns value  | `a -= 5` (same as `a = a - 5`) |
+| \*=      | Multiplies and assigns value | `a *= 5` (same as `a = a * 5`) |
+| /=       | Divides and assigns value    | `a /= 5` (same as `a = a / 5`) |
+| %=       | Modulus and assigns value    | `a %= 5` (same as `a = a % 5`) |
 
 public class OperatorDemo {
 public static void main(String[] args) {
@@ -396,3 +394,44 @@ int[][] matrix = {
 
 <li> Length of an Array: You can find the length of an array using array.length.</li>
 <li> Iterating Arrays: You can use loops (for, for-each, while) to iterate through array elements.</li>
+
+public class ForEachArray {
+public static void main(String[] args) {
+int[] numbers = {10, 20, 30, 40, 50};
+
+        // Using for-each loop to iterate over the array
+        System.out.println("Array Elements:");
+        for (int num : numbers) {
+            System.out.println(num);
+        }
+    }
+
+}
+
+#### Jagged Arrays (Irregular Multi-Dimensional Arrays)
+
+In Java, you can have jagged arrays, where each row in a 2D array can have different lengths.
+
+public class JaggedArray {
+public static void main(String[] args) {
+// Declare a jagged array
+int[][] jagged = new int[3][];
+jagged[0] = new int[2]; // First row has 2 elements
+jagged[1] = new int[3]; // Second row has 3 elements
+jagged[2] = new int[1]; // Third row has 1 element
+
+        // Initialize the jagged array
+        jagged[0][0] = 1; jagged[0][1] = 2;
+        jagged[1][0] = 3; jagged[1][1] = 4; jagged[1][2] = 5;
+        jagged[2][0] = 6;
+
+        // Print the jagged array
+        for (int i = 0; i < jagged.length; i++) {
+            for (int j = 0; j < jagged[i].length; j++) {
+                System.out.print(jagged[i][j] + " ");
+            }
+            System.out.println();  // Newline for each row
+        }
+    }
+
+}
