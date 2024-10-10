@@ -18,10 +18,10 @@ Java is an object-oriented language, promoting the use of objects and classes. O
 
 The four main concepts of Object-Oriented programming are:
 
-    <li> Abstraction</li>
-    <li> Encapsulation</li>
-    <li> Inheritance</li>
-    <li> Polymorphism</li>
+<li> Abstraction</li>
+<li> Encapsulation</li>
+<li> Inheritance</li>
+<li> Polymorphism</li>
 
 #### Simplicity
 
@@ -394,5 +394,5 @@ int[][] matrix = {
 
 #### Working with Arrays: Key Methods
 
-    <li> Length of an Array: You can find the length of an array using array.length.</li>
-    <li> Iterating Arrays: You can use loops (for, for-each, while) to iterate through array elements.</li>
+<li> Length of an Array: You can find the length of an array using array.length.</li>
+<li> Iterating Arrays: You can use loops (for, for-each, while) to iterate through array elements.</li>
