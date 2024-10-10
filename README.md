@@ -18,10 +18,10 @@ Java is an object-oriented language, promoting the use of objects and classes. O
 
 The four main concepts of Object-Oriented programming are:
 
-    <li> Abstraction </li>
-    <li> Encapsulation </li>
-    <li> Inheritance </li>
-    <li> Polymorphism </li>
+    <li> Abstraction</li>
+    <li> Encapsulation</li>
+    <li> Inheritance</li>
+    <li> Polymorphism</li>
 
 #### Simplicity
 
@@ -144,3 +144,255 @@ public class DataTypeDemo {
     }
 
 }
+
+### Operators
+
+#### Arithmetic Operators
+
+Arithmetic operators are used to perform mathematical operations such as addition, subtraction, multiplication, and division.
+
+Operator Description Example
+
+-         Addition	                                a + b (adds a and b)
+
+*         Subtraction	                                a - b (subtracts b from a)
+
+-         Multiplication	                            a * b (multiplies a and b)
+  / Division a / b (divides a by b)
+  % Modulus (remainder) a % b (remainder of a divided by b)
+  ++ Increment (adds 1 to the value) a++ or ++a
+  -- Decrement (subtracts 1 from the value) a-- or --a
+
+#### Relational Operators
+
+Relational operators compare two values and return a boolean result (true or false).
+
+Operator Description Example
+== Equal to a == b (true if a is equal to b)
+!= Not equal to a != b (true if a is not equal to b)
+
+>             Greater than	            a > b (true if a is greater than b)
+>
+> < Less than a < b (true if a is less than b)
+> = Greater than or equal to a >= b (true if a is greater than or equal to b)
+> <= Less than or equal to a <= b (true if a is less than or equal to b)
+
+#### Logical Operators
+
+Logical operators are used to perform logical "AND", "OR", and "NOT" operations. These are typically used with boolean expressions.
+
+Operator Description Example
+&& Logical AND a && b (true if both a and b are true)
+|| Logival OR a || b (true if any a or b are true)
+! Logical NOT !a (true if a is false)
+
+#### Bitwise Operators
+
+Bitwise operators operate on individual bits of integer data types (byte, short, int, long). They perform bit-level operations.
+
+Operator Description Example
+& Bitwise AND (1 if both bits are 1) a & b
+| Bitwise OR (1 if either of the bits is 1) a | b
+^ Bitwise XOR (1 if bits are different) a ^ b
+~ Bitwise NOT (inverts bits) ~a
+<< Left shift (shifts bits to the left) a << 2
+
+> >             Right shift (shifts bits to the right)	        a >> 2
+> >
+> > >             Unsigned right shift (shifts with 0 fill)	    a >>> 2
+
+#### Assignment Operators
+
+Assignment operators are used to assign values to variables. The most common one is =.
+
+Operator Description Example
+= Assigns value a = 5
++= Adds and assigns value a += 5 (same as a = a + 5)
+-= Subtracts and assigns value a -= 5 (same as a = a - 5)
+_= Multiplies and assigns value a _= 5 (same as a = a \* 5)
+/= Divides and assigns value a /= 5 (same as a = a / 5)
+%= Modulus and assigns value a %= 5 (same as a = a % 5)
+
+public class OperatorDemo {
+public static void main(String[] args) {
+// Arithmetic Operators
+int a = 10, b = 5;
+System.out.println("Arithmetic Operators:");
+System.out.println("a + b = " + (a + b)); // Addition
+System.out.println("a - b = " + (a - b)); // Subtraction
+System.out.println("a _ b = " + (a _ b)); // Multiplication
+System.out.println("a / b = " + (a / b)); // Division
+System.out.println("a % b = " + (a % b)); // Modulus
+
+        // Relational Operators
+        System.out.println("\nRelational Operators:");
+        System.out.println("a == b: " + (a == b));  // Equal to
+        System.out.println("a != b: " + (a != b));  // Not equal to
+        System.out.println("a > b: " + (a > b));    // Greater than
+        System.out.println("a < b: " + (a < b));    // Less than
+
+        // Logical Operators
+        boolean x = true, y = false;
+        System.out.println("\nLogical Operators:");
+        System.out.println("x && y: " + (x && y));  // Logical AND
+        System.out.println("x || y: " + (x || y));  // Logical OR
+        System.out.println("!x: " + (!x));          // Logical NOT
+
+        // Bitwise Operators
+        System.out.println("\nBitwise Operators:");
+        System.out.println("a & b: " + (a & b));    // Bitwise AND
+        System.out.println("a | b: " + (a | b));    // Bitwise OR
+        System.out.println("a ^ b: " + (a ^ b));    // Bitwise XOR
+        System.out.println("~a: " + (~a));          // Bitwise NOT
+        System.out.println("a << 2: " + (a << 2));  // Left shift
+        System.out.println("a >> 2: " + (a >> 2));  // Right shift
+
+        // Ternary Operator
+        int max = (a > b) ? a : b;
+        System.out.println("\nTernary Operator:");
+        System.out.println("Max of a and b is: " + max);
+    }
+
+}
+
+### Control Statements
+
+#### If-Else Statement
+
+The if-else statement allows a program to execute certain blocks of code based on a condition.
+
+#### Switch Statement
+
+The switch statement is used to perform different actions based on different conditions. It can be a more readable alternative to multiple if-else statements when you want to compare the same variable against multiple values.
+
+#### Loops
+
+Loops allow you to repeat a block of code multiple times until a specified condition is met.
+
+a. For Loop
+The for loop is used when the number of iterations is known beforehand. It has three parts: initialization, condition, and update.
+
+b. While Loop
+The while loop executes a block of code as long as a specified condition is true.
+
+c. Do-While Loop
+The do-while loop is similar to the while loop, but it ensures that the code is executed at least once before checking the condition.
+
+public class ControlStatementsDemo {
+public static void main(String[] args) {
+
+        // If-else statement
+        int number = 10;
+        if (number % 2 == 0) {
+            System.out.println("The number is even.");
+        } else {
+            System.out.println("The number is odd.");
+        }
+
+        // Switch statement
+        int day = 3;
+        switch (day) {
+            case 1:
+                System.out.println("Monday");
+                break;
+            case 2:
+                System.out.println("Tuesday");
+                break;
+            case 3:
+                System.out.println("Wednesday");
+                break;
+            default:
+                System.out.println("Invalid day");
+        }
+
+        // For loop
+        System.out.println("\nFor Loop:");
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Iteration: " + i);
+        }
+
+        // While loop
+        System.out.println("\nWhile Loop:");
+        int i = 1;
+        while (i <= 5) {
+            System.out.println("Iteration: " + i);
+            i++;
+        }
+
+        // Do-While loop
+        System.out.println("\nDo-While Loop:");
+        int j = 1;
+        do {
+            System.out.println("Iteration: " + j);
+            j++;
+        } while (j <= 5);
+    }
+
+}
+
+### Arrays
+
+#### Single-Dimensional Arrays
+
+A single-dimensional array is a list of elements of the same type stored in a contiguous memory location.
+
+public class SingleDimensionalArray {
+public static void main(String[] args) {
+// Declare and initialize an array
+int[] numbers = {10, 20, 30, 40, 50};
+
+        // Access and print array elements
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println("Element at index " + i + ": " + numbers[i]);
+        }
+
+        // Modify an array element
+        numbers[2] = 100;  // Changing the third element to 100
+        System.out.println("\nAfter modification:");
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println("Element at index " + i + ": " + numbers[i]);
+        }
+    }
+
+}
+
+#### Multi-Dimensional Arrays
+
+Multi-dimensional arrays are arrays of arrays. The most common type is the two-dimensional array, which can be thought of as a table or matrix.
+
+public class MultiDimensionalArray {
+public static void main(String[] args) {
+// Declare and initialize a 2D array
+int[][] matrix = {
+{1, 2, 3},
+{4, 5, 6},
+{7, 8, 9}
+};
+
+        // Access and print 2D array elements
+        System.out.println("2D Array (Matrix):");
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();  // Newline for each row
+        }
+
+        // Modify an element in the 2D array
+        matrix[1][2] = 100;  // Changing the element at row 1, column 2
+
+        System.out.println("\nAfter modification:");
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+}
+
+#### Working with Arrays: Key Methods
+
+    <li> Length of an Array: You can find the length of an array using array.length.</li>
+    <li> Iterating Arrays: You can use loops (for, for-each, while) to iterate through array elements.</li>
