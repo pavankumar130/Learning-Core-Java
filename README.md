@@ -46,3 +46,101 @@ As we know, java code written on one machine can be run on another machine. The 
 #### High Performance
 
 Java architecture is defined in such a way that it reduces overhead during the runtime and at some times java uses Just In Time (JIT) compiler where the compiler compiles code on-demand basis where it only compiles those methods that are called making applications to execute faster.
+
+### Data Types and Variables
+
+#### Data Types in Java
+
+Data types in Java are of different sizes and values that can be stored in the variable that is made as per convenience and circumstances to cover up all test cases. Java has two categories in which data types are segregated
+
+Primitive Data Type: such as boolean, char, int, short, byte, long, float, and double. The Boolean with uppercase B is a wrapper class for the primitive data type boolean in Java.
+Non-Primitive Data Type or Object Data type: such as String, Array, etc.
+![alt text](image.png)
+
+// Java Program to Demonstrate Char Primitive Data Type
+
+// Class
+class GFG {
+
+    // Main driver method
+    public static void main(String args[])
+    {
+
+        // Creating and initializing custom character
+        char a = 'G';
+
+        // Integer data type is generally
+        // used for numeric values
+        int i = 89;
+
+        // use byte and short
+        // if memory is a constraint
+        byte b = 4;
+
+        // this will give error as number is
+        // larger than byte range
+        // byte b1 = 7888888955;
+
+        short s = 56;
+
+        // this will give error as number is
+        // larger than short range
+        // short s1 = 87878787878;
+
+        // by default fraction value
+        // is double in java
+        double d = 4.355453532;
+
+        // for float use 'f' as suffix as standard
+        float f = 4.7333434f;
+
+        // need to hold big range of numbers then we need
+        // this data type
+        long l = 12121;
+
+        System.out.println("char: " + a);
+        System.out.println("integer: " + i);
+        System.out.println("byte: " + b);
+        System.out.println("short: " + s);
+        System.out.println("float: " + f);
+        System.out.println("double: " + d);
+        System.out.println("long: " + l);
+    }
+
+}
+
+#### Variable Scope
+
+The scope of a variable refers to the part of the program where the variable is accessible. Java has three types of variable scopes:
+
+a. Local Scope
+Variables declared inside a method or block are called local variables. They are accessible only within that method or block and get destroyed once the method finishes execution.
+
+b. Instance Scope
+Variables declared inside a class but outside of any method are called instance variables (non-static). They belong to an instance of the class and can be accessed through object references.
+
+c. Class Scope (Static Variables)
+Variables declared with the static keyword are class variables and are shared among all instances of the class.
+
+public class DataTypeDemo {
+
+    // instance variable
+    int instanceVar = 100;
+
+    // static variable
+    static int staticVar = 200;
+
+    public static void main(String[] args) {
+        // local variable
+        int localVar = 300;
+        System.out.println("Local Variable: " + localVar);
+
+        // Accessing static variable
+        System.out.println("Static Variable: " + staticVar);
+
+        // Accessing instance variable
+        DataTypeDemo demo = new DataTypeDemo();
+        System.out.println("Instance Variable: " + demo.instanceVar);
+    }
+
+}
