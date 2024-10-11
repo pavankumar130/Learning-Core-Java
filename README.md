@@ -466,8 +466,9 @@ public class JaggedArray {
 #### Example :
 
 class Car {
-String model;
-int year;
+
+    String model;
+    int year;
 
     void drive() {
         System.out.println("The car is driving.");
@@ -493,8 +494,9 @@ Encapsulation is the practice of wrapping data (variables) and code (methods) to
 #### Example :
 
 class Person {
-private String name;
-private int age;
+
+    private String name;
+    private int age;
 
     public void setName(String name) {
         this.name = name;
