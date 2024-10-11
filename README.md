@@ -216,44 +216,45 @@ Assignment operators are used to assign values to variables. The most common one
 #### Example :
 
 public class OperatorDemo {
-public static void main(String[] args) {
-// Arithmetic Operators
-int a = 10, b = 5;
-System.out.println("Arithmetic Operators:");
-System.out.println("a + b = " + (a + b)); // Addition
-System.out.println("a - b = " + (a - b)); // Subtraction
-System.out.println("a _ b = " + (a _ b)); // Multiplication
-System.out.println("a / b = " + (a / b)); // Division
-System.out.println("a % b = " + (a % b)); // Modulus
 
-        // Relational Operators
-        System.out.println("\nRelational Operators:");
-        System.out.println("a == b: " + (a == b));  // Equal to
-        System.out.println("a != b: " + (a != b));  // Not equal to
-        System.out.println("a > b: " + (a > b));    // Greater than
-        System.out.println("a < b: " + (a < b));    // Less than
+    public static void main(String[] args) {
+    // Arithmetic Operators
+    int a = 10, b = 5;
+    System.out.println("Arithmetic Operators:");
+    System.out.println("a + b = " + (a + b)); // Addition
+    System.out.println("a - b = " + (a - b)); // Subtraction
+    System.out.println("a _ b = " + (a _ b)); // Multiplication
+    System.out.println("a / b = " + (a / b)); // Division
+    System.out.println("a % b = " + (a % b)); // Modulus
 
-        // Logical Operators
-        boolean x = true, y = false;
-        System.out.println("\nLogical Operators:");
-        System.out.println("x && y: " + (x && y));  // Logical AND
-        System.out.println("x || y: " + (x || y));  // Logical OR
-        System.out.println("!x: " + (!x));          // Logical NOT
+            // Relational Operators
+            System.out.println("\nRelational Operators:");
+            System.out.println("a == b: " + (a == b));  // Equal to
+            System.out.println("a != b: " + (a != b));  // Not equal to
+            System.out.println("a > b: " + (a > b));    // Greater than
+            System.out.println("a < b: " + (a < b));    // Less than
 
-        // Bitwise Operators
-        System.out.println("\nBitwise Operators:");
-        System.out.println("a & b: " + (a & b));    // Bitwise AND
-        System.out.println("a | b: " + (a | b));    // Bitwise OR
-        System.out.println("a ^ b: " + (a ^ b));    // Bitwise XOR
-        System.out.println("~a: " + (~a));          // Bitwise NOT
-        System.out.println("a << 2: " + (a << 2));  // Left shift
-        System.out.println("a >> 2: " + (a >> 2));  // Right shift
+            // Logical Operators
+            boolean x = true, y = false;
+            System.out.println("\nLogical Operators:");
+            System.out.println("x && y: " + (x && y));  // Logical AND
+            System.out.println("x || y: " + (x || y));  // Logical OR
+            System.out.println("!x: " + (!x));          // Logical NOT
 
-        // Ternary Operator
-        int max = (a > b) ? a : b;
-        System.out.println("\nTernary Operator:");
-        System.out.println("Max of a and b is: " + max);
-    }
+            // Bitwise Operators
+            System.out.println("\nBitwise Operators:");
+            System.out.println("a & b: " + (a & b));    // Bitwise AND
+            System.out.println("a | b: " + (a | b));    // Bitwise OR
+            System.out.println("a ^ b: " + (a ^ b));    // Bitwise XOR
+            System.out.println("~a: " + (~a));          // Bitwise NOT
+            System.out.println("a << 2: " + (a << 2));  // Left shift
+            System.out.println("a >> 2: " + (a >> 2));  // Right shift
+
+            // Ternary Operator
+            int max = (a > b) ? a : b;
+            System.out.println("\nTernary Operator:");
+            System.out.println("Max of a and b is: " + max);
+        }
 
 }
 
@@ -283,54 +284,55 @@ The do-while loop is similar to the while loop, but it ensures that the code is 
 #### Example :
 
 public class ControlStatementsDemo {
-public static void main(String[] args) {
 
-        // If-else statement
-        int number = 10;
-        if (number % 2 == 0) {
-            System.out.println("The number is even.");
-        } else {
-            System.out.println("The number is odd.");
+    public static void main(String[] args) {
+
+            // If-else statement
+            int number = 10;
+            if (number % 2 == 0) {
+                System.out.println("The number is even.");
+            } else {
+                System.out.println("The number is odd.");
+            }
+
+            // Switch statement
+            int day = 3;
+            switch (day) {
+                case 1:
+                    System.out.println("Monday");
+                    break;
+                case 2:
+                    System.out.println("Tuesday");
+                    break;
+                case 3:
+                    System.out.println("Wednesday");
+                    break;
+                default:
+                    System.out.println("Invalid day");
+            }
+
+            // For loop
+            System.out.println("\nFor Loop:");
+            for (int i = 1; i <= 5; i++) {
+                System.out.println("Iteration: " + i);
+            }
+
+            // While loop
+            System.out.println("\nWhile Loop:");
+            int i = 1;
+            while (i <= 5) {
+                System.out.println("Iteration: " + i);
+                i++;
+            }
+
+            // Do-While loop
+            System.out.println("\nDo-While Loop:");
+            int j = 1;
+            do {
+                System.out.println("Iteration: " + j);
+                j++;
+            } while (j <= 5);
         }
-
-        // Switch statement
-        int day = 3;
-        switch (day) {
-            case 1:
-                System.out.println("Monday");
-                break;
-            case 2:
-                System.out.println("Tuesday");
-                break;
-            case 3:
-                System.out.println("Wednesday");
-                break;
-            default:
-                System.out.println("Invalid day");
-        }
-
-        // For loop
-        System.out.println("\nFor Loop:");
-        for (int i = 1; i <= 5; i++) {
-            System.out.println("Iteration: " + i);
-        }
-
-        // While loop
-        System.out.println("\nWhile Loop:");
-        int i = 1;
-        while (i <= 5) {
-            System.out.println("Iteration: " + i);
-            i++;
-        }
-
-        // Do-While loop
-        System.out.println("\nDo-While Loop:");
-        int j = 1;
-        do {
-            System.out.println("Iteration: " + j);
-            j++;
-        } while (j <= 5);
-    }
 
 }
 
@@ -343,22 +345,23 @@ A single-dimensional array is a list of elements of the same type stored in a co
 #### Example :
 
 public class SingleDimensionalArray {
-public static void main(String[] args) {
-// Declare and initialize an array
-int[] numbers = {10, 20, 30, 40, 50};
 
-        // Access and print array elements
-        for (int i = 0; i < numbers.length; i++) {
-            System.out.println("Element at index " + i + ": " + numbers[i]);
-        }
+    public static void main(String[] args) {
+    // Declare and initialize an array
+    int[] numbers = {10, 20, 30, 40, 50};
 
-        // Modify an array element
-        numbers[2] = 100;  // Changing the third element to 100
-        System.out.println("\nAfter modification:");
-        for (int i = 0; i < numbers.length; i++) {
-            System.out.println("Element at index " + i + ": " + numbers[i]);
+            // Access and print array elements
+            for (int i = 0; i < numbers.length; i++) {
+                System.out.println("Element at index " + i + ": " + numbers[i]);
+            }
+
+            // Modify an array element
+            numbers[2] = 100;  // Changing the third element to 100
+            System.out.println("\nAfter modification:");
+            for (int i = 0; i < numbers.length; i++) {
+                System.out.println("Element at index " + i + ": " + numbers[i]);
+            }
         }
-    }
 
 }
 
@@ -369,34 +372,35 @@ Multi-dimensional arrays are arrays of arrays. The most common type is the two-d
 #### Example :
 
 public class MultiDimensionalArray {
-public static void main(String[] args) {
-// Declare and initialize a 2D array
-int[][] matrix = {
-{1, 2, 3},
-{4, 5, 6},
-{7, 8, 9}
-};
 
-        // Access and print 2D array elements
-        System.out.println("2D Array (Matrix):");
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
-                System.out.print(matrix[i][j] + " ");
+    public static void main(String[] args) {
+    // Declare and initialize a 2D array
+    int[][] matrix = {
+    {1, 2, 3},
+    {4, 5, 6},
+    {7, 8, 9}
+    };
+
+            // Access and print 2D array elements
+            System.out.println("2D Array (Matrix):");
+            for (int i = 0; i < matrix.length; i++) {
+                for (int j = 0; j < matrix[i].length; j++) {
+                    System.out.print(matrix[i][j] + " ");
+                }
+                System.out.println();  // Newline for each row
             }
-            System.out.println();  // Newline for each row
-        }
 
-        // Modify an element in the 2D array
-        matrix[1][2] = 100;  // Changing the element at row 1, column 2
+            // Modify an element in the 2D array
+            matrix[1][2] = 100;  // Changing the element at row 1, column 2
 
-        System.out.println("\nAfter modification:");
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
-                System.out.print(matrix[i][j] + " ");
+            System.out.println("\nAfter modification:");
+            for (int i = 0; i < matrix.length; i++) {
+                for (int j = 0; j < matrix[i].length; j++) {
+                    System.out.print(matrix[i][j] + " ");
+                }
+                System.out.println();
             }
-            System.out.println();
         }
-    }
 
 }
 
@@ -408,15 +412,16 @@ int[][] matrix = {
 #### Example :
 
 public class ForEachArray {
-public static void main(String[] args) {
-int[] numbers = {10, 20, 30, 40, 50};
 
-        // Using for-each loop to iterate over the array
-        System.out.println("Array Elements:");
-        for (int num : numbers) {
-            System.out.println(num);
+    public static void main(String[] args) {
+    int[] numbers = {10, 20, 30, 40, 50};
+
+            // Using for-each loop to iterate over the array
+            System.out.println("Array Elements:");
+            for (int num : numbers) {
+                System.out.println(num);
+            }
         }
-    }
 
 }
 
@@ -427,26 +432,27 @@ In Java, you can have jagged arrays, where each row in a 2D array can have diffe
 #### Example :
 
 public class JaggedArray {
-public static void main(String[] args) {
-// Declare a jagged array
-int[][] jagged = new int[3][];
-jagged[0] = new int[2]; // First row has 2 elements
-jagged[1] = new int[3]; // Second row has 3 elements
-jagged[2] = new int[1]; // Third row has 1 element
 
-        // Initialize the jagged array
-        jagged[0][0] = 1; jagged[0][1] = 2;
-        jagged[1][0] = 3; jagged[1][1] = 4; jagged[1][2] = 5;
-        jagged[2][0] = 6;
+    public static void main(String[] args) {
+    // Declare a jagged array
+    int[][] jagged = new int[3][];
+    jagged[0] = new int[2]; // First row has 2 elements
+    jagged[1] = new int[3]; // Second row has 3 elements
+    jagged[2] = new int[1]; // Third row has 1 element
 
-        // Print the jagged array
-        for (int i = 0; i < jagged.length; i++) {
-            for (int j = 0; j < jagged[i].length; j++) {
-                System.out.print(jagged[i][j] + " ");
+            // Initialize the jagged array
+            jagged[0][0] = 1; jagged[0][1] = 2;
+            jagged[1][0] = 3; jagged[1][1] = 4; jagged[1][2] = 5;
+            jagged[2][0] = 6;
+
+            // Print the jagged array
+            for (int i = 0; i < jagged.length; i++) {
+                for (int j = 0; j < jagged[i].length; j++) {
+                    System.out.print(jagged[i][j] + " ");
+                }
+                System.out.println();  // Newline for each row
             }
-            System.out.println();  // Newline for each row
         }
-    }
 
 }
 
@@ -470,12 +476,14 @@ int year;
 }
 
 public class Main {
-public static void main(String[] args) {
-Car car1 = new Car(); // Creating an object of Car class
-car1.model = "Toyota";
-car1.year = 2020;
-car1.drive();
-}
+
+    public static void main(String[] args) {
+    Car car1 = new Car(); // Creating an object of Car class
+    car1.model = "Toyota";
+    car1.year = 2020;
+    car1.drive();
+    }
+
 }
 
 #### Encapsulation
@@ -509,12 +517,14 @@ private int age;
 }
 
 public class Main {
-public static void main(String[] args) {
-Person p1 = new Person();
-p1.setName("John");
-p1.setAge(30);
-System.out.println(p1.getName() + " is " + p1.getAge() + " years old.");
-}
+
+    public static void main(String[] args) {
+    Person p1 = new Person();
+    p1.setName("John");
+    p1.setAge(30);
+    System.out.println(p1.getName() + " is " + p1.getAge() + " years old.");
+    }
+
 }
 
 #### Inheritance
@@ -524,23 +534,30 @@ Inheritance allows one class to inherit properties and behaviors from another cl
 #### Example :
 
 class Animal {
-void eat() {
-System.out.println("This animal is eating.");
-}
+
+    void eat() {
+    System.out.println("This animal is eating.");
+    }
+
 }
 
-class Dog extends Animal { // Dog inherits from Animal
-void bark() {
-System.out.println("The dog is barking.");
-}
+class Dog extends Animal {
+
+    // Dog inherits from Animal
+    void bark() {
+    System.out.println("The dog is barking.");
+    }
+
 }
 
 public class Main {
-public static void main(String[] args) {
-Dog d1 = new Dog();
-d1.eat(); // Inherited method
-d1.bark(); // Dog's own method
-}
+
+    public static void main(String[] args) {
+    Dog d1 = new Dog();
+    d1.eat(); // Inherited method
+    d1.bark(); // Dog's own method
+    }
+
 }
 
 #### Polymorphism
@@ -550,30 +567,37 @@ Polymorphism means "many forms". In Java, polymorphism allows one interface to b
 #### Example of Method Overriding (Runtime Polymorphism):
 
 class Animal {
-void sound() {
-System.out.println("Some generic animal sound.");
-}
+
+    void sound() {
+    System.out.println("Some generic animal sound.");
+    }
+
 }
 
 class Cat extends Animal {
-void sound() {
-System.out.println("Meow");
-}
+
+    void sound() {
+    System.out.println("Meow");
+    }
+
 }
 
 public class Main {
-public static void main(String[] args) {
-Animal a = new Cat(); // Cat object referenced by Animal
-a.sound(); // Calls the overridden method in Cat
-}
+
+    public static void main(String[] args) {
+    Animal a = new Cat(); // Cat object referenced by Animal
+    a.sound(); // Calls the overridden method in Cat
+    }
+
 }
 
 #### Example of Method Overloading (Compile-time Polymorphism):
 
 class MathOperation {
-int add(int a, int b) {
-return a + b;
-}
+
+    int add(int a, int b) {
+    return a + b;
+    }
 
     int add(int a, int b, int c) {
         return a + b + c;
@@ -582,11 +606,13 @@ return a + b;
 }
 
 public class Main {
-public static void main(String[] args) {
-MathOperation math = new MathOperation();
-System.out.println(math.add(5, 10)); // Calls add(int, int)
-System.out.println(math.add(5, 10, 15)); // Calls add(int, int, int)
-}
+
+    public static void main(String[] args) {
+    MathOperation math = new MathOperation();
+    System.out.println(math.add(5, 10)); // Calls add(int, int)
+    System.out.println(math.add(5, 10, 15)); // Calls add(int, int, int)
+    }
+
 }
 
 #### Abstraction
@@ -596,7 +622,8 @@ Abstraction is the concept of hiding the complex implementation details and show
 #### Example of Abstract Class:
 
 abstract class Animal {
-abstract void sound(); // Abstract method (no implementation)
+
+    abstract void sound(); // Abstract method (no implementation)
 
     void sleep() {
         System.out.println("This animal is sleeping.");
@@ -605,15 +632,19 @@ abstract void sound(); // Abstract method (no implementation)
 }
 
 class Dog extends Animal {
-void sound() {
-System.out.println("Bark");
-}
+
+    void sound() {
+    System.out.println("Bark");
+    }
+
 }
 
 public class Main {
-public static void main(String[] args) {
-Animal a = new Dog();
-a.sound(); // Must be implemented by Dog
-a.sleep(); // Uses the non-abstract method from Animal
-}
+
+    public static void main(String[] args) {
+    Animal a = new Dog();
+    a.sound(); // Must be implemented by Dog
+    a.sleep(); // Uses the non-abstract method from Animal
+    }
+
 }
