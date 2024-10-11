@@ -57,7 +57,7 @@ Primitive Data Type: such as boolean, char, int, short, byte, long, float, and d
 Non-Primitive Data Type or Object Data type: such as String, Array, etc.
 ![alt text](image.png)
 
-// Java Program to Demonstrate Char Primitive Data Type
+#### Java Program to Demonstrate Char Primitive Data Type :
 
 // Class
 class GFG {
@@ -121,6 +121,8 @@ Variables declared inside a class but outside of any method are called instance 
 
 c. Class Scope (Static Variables)
 Variables declared with the static keyword are class variables and are shared among all instances of the class.
+
+#### Example :
 
 public class DataTypeDemo {
 
@@ -211,6 +213,8 @@ Assignment operators are used to assign values to variables. The most common one
 | /=       | Divides and assigns value    | `a /= 5` (same as `a = a / 5`) |
 | %=       | Modulus and assigns value    | `a %= 5` (same as `a = a % 5`) |
 
+#### Example :
+
 public class OperatorDemo {
 public static void main(String[] args) {
 // Arithmetic Operators
@@ -276,6 +280,8 @@ The while loop executes a block of code as long as a specified condition is true
 c. Do-While Loop
 The do-while loop is similar to the while loop, but it ensures that the code is executed at least once before checking the condition.
 
+#### Example :
+
 public class ControlStatementsDemo {
 public static void main(String[] args) {
 
@@ -334,6 +340,8 @@ public static void main(String[] args) {
 
 A single-dimensional array is a list of elements of the same type stored in a contiguous memory location.
 
+#### Example :
+
 public class SingleDimensionalArray {
 public static void main(String[] args) {
 // Declare and initialize an array
@@ -357,6 +365,8 @@ int[] numbers = {10, 20, 30, 40, 50};
 #### Multi-Dimensional Arrays
 
 Multi-dimensional arrays are arrays of arrays. The most common type is the two-dimensional array, which can be thought of as a table or matrix.
+
+#### Example :
 
 public class MultiDimensionalArray {
 public static void main(String[] args) {
@@ -395,6 +405,8 @@ int[][] matrix = {
 <li> Length of an Array: You can find the length of an array using array.length.</li>
 <li> Iterating Arrays: You can use loops (for, for-each, while) to iterate through array elements.</li>
 
+#### Example :
+
 public class ForEachArray {
 public static void main(String[] args) {
 int[] numbers = {10, 20, 30, 40, 50};
@@ -411,6 +423,8 @@ int[] numbers = {10, 20, 30, 40, 50};
 #### Jagged Arrays (Irregular Multi-Dimensional Arrays)
 
 In Java, you can have jagged arrays, where each row in a 2D array can have different lengths.
+
+#### Example :
 
 public class JaggedArray {
 public static void main(String[] args) {
@@ -434,4 +448,172 @@ jagged[2] = new int[1]; // Third row has 1 element
         }
     }
 
+}
+
+### Object-Oriented Programming
+
+#### Classes and Objects
+
+<li>Class: A blueprint or template for creating objects. It defines properties (attributes) and behaviors (methods) that the objects of this class will have. </li>
+<li>Object: An instance of a class. It represents an entity with specific values for the properties defined in the class.</li>
+
+#### Example :
+
+class Car {
+String model;
+int year;
+
+    void drive() {
+        System.out.println("The car is driving.");
+    }
+
+}
+
+public class Main {
+public static void main(String[] args) {
+Car car1 = new Car(); // Creating an object of Car class
+car1.model = "Toyota";
+car1.year = 2020;
+car1.drive();
+}
+}
+
+#### Encapsulation
+
+Encapsulation is the practice of wrapping data (variables) and code (methods) together as a single unit. In Java, this is done by using access modifiers like private, public, and protected. Encapsulation helps protect data from unauthorized access and modification.
+
+#### Example :
+
+class Person {
+private String name;
+private int age;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public void setAge(int age) {
+        if (age > 0) {
+            this.age = age;
+        }
+    }
+
+    public int getAge() {
+        return this.age;
+    }
+
+}
+
+public class Main {
+public static void main(String[] args) {
+Person p1 = new Person();
+p1.setName("John");
+p1.setAge(30);
+System.out.println(p1.getName() + " is " + p1.getAge() + " years old.");
+}
+}
+
+#### Inheritance
+
+Inheritance allows one class to inherit properties and behaviors from another class. This promotes code reuse and establishes a relationship between the classes. The class that inherits is called the subclass, and the class from which it inherits is called the superclass.
+
+#### Example :
+
+class Animal {
+void eat() {
+System.out.println("This animal is eating.");
+}
+}
+
+class Dog extends Animal { // Dog inherits from Animal
+void bark() {
+System.out.println("The dog is barking.");
+}
+}
+
+public class Main {
+public static void main(String[] args) {
+Dog d1 = new Dog();
+d1.eat(); // Inherited method
+d1.bark(); // Dog's own method
+}
+}
+
+#### Polymorphism
+
+Polymorphism means "many forms". In Java, polymorphism allows one interface to be used for a general class of actions, with the specific action determined by the object that implements the interface. Polymorphism is mainly achieved through method overriding (runtime polymorphism) and method overloading (compile-time polymorphism).
+
+#### Example of Method Overriding (Runtime Polymorphism):
+
+class Animal {
+void sound() {
+System.out.println("Some generic animal sound.");
+}
+}
+
+class Cat extends Animal {
+void sound() {
+System.out.println("Meow");
+}
+}
+
+public class Main {
+public static void main(String[] args) {
+Animal a = new Cat(); // Cat object referenced by Animal
+a.sound(); // Calls the overridden method in Cat
+}
+}
+
+#### Example of Method Overloading (Compile-time Polymorphism):
+
+class MathOperation {
+int add(int a, int b) {
+return a + b;
+}
+
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+}
+
+public class Main {
+public static void main(String[] args) {
+MathOperation math = new MathOperation();
+System.out.println(math.add(5, 10)); // Calls add(int, int)
+System.out.println(math.add(5, 10, 15)); // Calls add(int, int, int)
+}
+}
+
+#### Abstraction
+
+Abstraction is the concept of hiding the complex implementation details and showing only the essential features of an object. This can be achieved in Java using abstract classes or interfaces.
+
+#### Example of Abstract Class:
+
+abstract class Animal {
+abstract void sound(); // Abstract method (no implementation)
+
+    void sleep() {
+        System.out.println("This animal is sleeping.");
+    }
+
+}
+
+class Dog extends Animal {
+void sound() {
+System.out.println("Bark");
+}
+}
+
+public class Main {
+public static void main(String[] args) {
+Animal a = new Dog();
+a.sound(); // Must be implemented by Dog
+a.sleep(); // Uses the non-abstract method from Animal
+}
 }
