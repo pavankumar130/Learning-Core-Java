@@ -179,9 +179,9 @@ Relational operators compare two values and return a boolean result (true or fal
 Logical operators are used to perform logical "AND", "OR", and "NOT" operations. These are typically used with boolean expressions.
 
 | Operator | Description | Example                                      |
-| -------- | ----------- | -------------------------------------------- | --- | ---------------------------------- |
+| -------- | ----------- | -------------------------------------------- |
 | &&       | Logical AND | `a && b` (true if both `a` and `b` are true) |
-| \|\|     | Logical OR  | `a                                           |     | b`(true if either`a`or`b` is true) |
+| \|\|     | Logical OR  | `a \|\| B` (true if any `a` or `b` is true)  |
 | !        | Logical NOT | `!a` (true if `a` is false)                  |
 
 #### Bitwise Operators
@@ -189,9 +189,9 @@ Logical operators are used to perform logical "AND", "OR", and "NOT" operations.
 Bitwise operators operate on individual bits of integer data types (byte, short, int, long). They perform bit-level operations.
 
 | Operator | Description                               | Example   |
-| -------- | ----------------------------------------- | --------- | --- |
+| -------- | ----------------------------------------- | --------- |
 | &        | Bitwise AND (1 if both bits are 1)        | `a & b`   |
-| \|       | Bitwise OR (1 if either of the bits is 1) | `a        | b`  |
+| \|       | Bitwise OR (1 if either of the bits is 1) | `a \| b`  |
 | ^        | Bitwise XOR (1 if bits are different)     | `a ^ b`   |
 | ~        | Bitwise NOT (inverts bits)                | `~a`      |
 | <<       | Left shift (shifts bits to the left)      | `a << 2`  |
